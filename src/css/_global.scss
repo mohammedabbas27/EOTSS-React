@@ -1,0 +1,3 @@
+@use "00-base/configure" with (
+  $assets-path: "~@massds/mayflower-assets/static"
+);

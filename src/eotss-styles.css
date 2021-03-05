@@ -1,0 +1,383 @@
+.main-content {
+  margin-top: 40px;
+}
+.ma__about-section__person {
+  margin-top: 80px;
+}
+.ma__header {
+  /* transition: ease all 0.4s; */
+}
+.ma__main-nav__top-link {
+  font-size: 1.2rem;
+}
+
+.ma__about-section {
+  min-height: auto;
+  margin-bottom: 60px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 0;
+  z-index: 100;
+  background: #f2f2f2;
+}
+
+.ma__link-list__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ma__link-list__items {
+  display: inline-block;
+}
+
+.button-center {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ma__split-columns__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.upcoming-events {
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.career-video {
+  padding-left: 20px;
+  margin-right: 80px;
+}
+
+.careers-paragraph {
+  padding-left: 20px;
+  width: 50%;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 960px) {
+  .careers-paragraph {
+    width: 100%;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.topbar-hide {
+  display: none;
+}
+
+.remove-padding {
+  padding-top: 0px;
+}
+
+.search-services-form {
+  max-width: 900px;
+}
+
+.search-services {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-search-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.service-search-buttons > * {
+  margin-left: 10px;
+}
+
+@media (min-width: 1080px) {
+  .ma__action-card__item {
+    width: 31.7%;
+  }
+  .ma__action-card__item:nth-child(2n) {
+    margin-right: 2.35765%;
+  }
+  .ma__action-card__item:nth-child(2n + 1) {
+    clear: none;
+  }
+  .ma__action-card__item:nth-child(3n) {
+    margin-right: 0px;
+  }
+}
+.show-more-organizations {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .show-more-organizations {
+    display: block;
+  }
+}
+
+/* .ma__illustrated-header__content:after {
+    background: none;
+  }
+  
+  .ma__illustrated-header__content:before {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: linear-gradient(
+      to top,
+      rgb(56 133 87 / 43%) 20%,
+      rgb(103 99 99 / 10%) 80%
+    );
+  }
+  
+  .ma__illustrated-header__image--empty {
+    background-color: #388557;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: linear-gradient(
+      to top,
+      rgb(56 133 87 / 43%) 20%,
+      rgb(103 99 99 / 10%) 80%
+    );
+  } */
+
+.ma__illustrated-header {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.ma__input-typeahead--boxed {
+  background: white;
+}
+
+.ma__header-search {
+  max-width: none;
+}
+.main-content--two .page-content > *,
+.main-content--two .page-content .ma__rich-text__container p {
+  margin-top: 28px;
+  margin-top: 1.75rem;
+  margin-bottom: 0px;
+}
+
+.ma__comp-heading {
+  margin-bottom: 15px !important;
+}
+
+.sidebar-margin {
+  top: 220px !important;
+}
+
+@media (min-width: 911px) {
+  .sidebar {
+    position: fixed;
+    top: 360px;
+    bottom: -20px;
+    overflow-y: scroll;
+  }
+}
+
+.color-green {
+  color: #388557;
+}
+@media (min-width: 1460px) {
+  .sidebar {
+    width: 400px;
+  }
+}
+.sidebar {
+  margin-bottom: 40px;
+  background: rgb(242, 242, 242);
+  padding: 20px;
+}
+.sidebar > * {
+  margin-top: 20px;
+}
+
+.sidebar h3 {
+  margin-bottom: 0px;
+}
+
+.sidebar .ma__button {
+  width: 100%;
+  text-align: center;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.sidebar-top {
+  top: 0px;
+}
+
+.ma__header-search__wrapper {
+  display: flex;
+  position: relative;
+}
+
+.ma__header-search__wrapper .ma__button-icon {
+  border-right: none;
+}
+
+.ma__label--inline {
+  margin-right: 0.5rem;
+}
+
+.ma__select-box__field.ma__select-box__field--inline {
+  display: inline-flex;
+  align-items: center;
+}
+
+.ma__input-typeahead--boxed {
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  z-index: 100;
+}
+
+.ma__rich-text .ma__action-finder,
+.ma__rich-text .ma__action-finder--no-background {
+  background: none;
+}
+
+.page-content.no-sidebar {
+  float: none;
+  padding-right: 0;
+  width: 100%;
+}
+
+.ma__rich-text .ma__callout-link {
+  padding: 15px 20px;
+}
+
+@media (min-width: 621px) {
+  .ma__callout-link {
+    padding: 20px 30px !important;
+  }
+}
+
+.ma__rich-text .ma__action-finder__container {
+  padding: 0 !important;
+}
+
+.ma__rich-text .ma__action-finder__items:not(.ma__action-finder__items--all) {
+  padding: 0;
+}
+
+@media (min-width: 621px) {
+  .ma__rich-text .ma__action-finder__items {
+    margin-top: 1.75rem;
+    margin-bottom: calc(1.75rem - 20px);
+  }
+}
+
+#GUID935283478A {
+  background-image: url("https://www.mass.gov/files/styles/hero1600x800/public/homepage-search-background-images/statehouse-downtown-home-hero-min.jpg?itok=-Rc-VnpW");
+}
+
+@media (min-width: 911px) {
+  .ma__stacked-row__container {
+    padding-top: 90px;
+  }
+}
+
+.ma__card__img--ID1701206 {
+  background-image: url("https://www.mass.gov/files/2021-01/MA-State-Groups-Phases-01_0.png");
+}
+
+.ma__horizontal-list:nth-child(n) {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 550;
+  line-height: 1.2;
+}
+.ma__horizontal-list:nth-child(n) li:nth-child(n) {
+  display: block;
+  list-style: none;
+  margin: 15px;
+  padding: 0;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 170px;
+  flex: 0 0 170px;
+}
+
+.ma__card__img--ID1701206 {
+  background-image: url("https://www.mass.gov/files/2021-01/MA-State-Groups-Phases-01_0.png");
+}
+
+.ma__page-header__optional-content .main-content {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.ma__sections-3up__container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.ma__information-details__content .ma__rich-text__container {
+  margin-top: 0px !important;
+}
+
+.ma__sections-3up__container > * {
+  margin-top: 30px;
+}
+
+.ma__card__img--ID1701206 {
+  background-image: url("https://www.mass.gov/files/2021-01/People-Masks_Group_Light-Blue_768x576_0.png");
+}
+/* #fsForm2521317 {
+        border: 2px solid #dcdcdc;
+        background: #fff;
+        max-width: 35em;
+        padding: 2.5em;
+        margin: 0 auto 5rem;
+      }
+      
+      .ma__input-group__items--inline {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -30px;
+      }
+      
+      .ma__input-group__items--inline .ma__input-group__item {
+        margin-left: 30px;
+      }
+      
+      .ma__input-radio {
+          display: inline-block;
+          position: relative;
+      }
+      
+      .ma__input-radio__label {
+        font-size: 1.375rem;
+        line-height: 1rem;
+        padding-left: 1.5em;
+        font-weight: 400;
+      } */
