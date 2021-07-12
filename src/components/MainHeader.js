@@ -10,7 +10,6 @@ const MainHeader = () => (
       data-id="GUID18378923w38789"
     >
       <div className="ma__emergency-alerts__header">
-        m*
         <div className="ma__emergency-alerts__container">
           <h2 className="ma__emergency-header">
             <span className="ma__emergency-header__label">
