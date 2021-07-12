@@ -1,55 +1,59 @@
-import React from "react";
-import { GenTeaser, Button, DecorativeLink } from "@massds/mayflower-react";
+import React from 'react';
+import { GenTeaser, Button, DecorativeLink } from '@massds/mayflower-react';
+
 class Service extends React.Component {
   constructor() {
     super();
-    this.orderNow = this.orderNow.bind(this);
     this.navigateService = this.navigateService.bind(this);
   }
-  orderNow() {
-    // this.props.history.push("/");
-  }
+
+
   navigateService(event) {
     event.preventDefault();
-    this.props.history.push(`${this.props.headerLink}`);
+    const { headerLink, history } = this.props;
+    history.push(`${headerLink}`);
   }
+
   render() {
-    return (
+    const {
+      imageSrc, headerLink, headerInfo, headerText, isDownload, downloadLink, downLoadInfo, downloadDescription, serviceDescription, orderLink
+    } = this.props;
+    return(
       <GenTeaser align="top">
         <GenTeaser.Image
           img={{
-            alt: "",
-            shape: "circular",
-            src: this.props.imageSrc
+            alt: '',
+            shape: 'circular',
+            src: imageSrc
           }}
         />
         <GenTeaser.Details>
           <GenTeaser.Title
             title={{
-              href: this.props.headerLink,
-              info: this.props.headerInfo,
+              href: headerLink,
+              info: headerInfo,
               showFileIcon: false,
-              text: this.props.headerText
+              text: headerText
             }}
             onClick={this.navigateService}
           />
-          {this.props.isDownload ? (
+          {isDownload ? (
             <DecorativeLink
-              href={this.props.downloadLink}
-              info={this.props.downLoadInfo}
+              href={downloadLink}
+              info={downLoadInfo}
               showFileIcon
-              text={this.props.downloadDescription}
+              text={downloadDescription}
             />
           ) : (
-            ""
+            ''
           )}
 
-          <div style={{ height: "20px" }} />
-          <GenTeaser.Description description={this.props.serviceDescription} />
+          <div style={{ height: '20px' }} />
+          <GenTeaser.Description description={serviceDescription} />
           <Button
-            classes={[""]}
+            classes={['']}
             disabled={false}
-            href={this.props.orderLink}
+            href={orderLink}
             info="Order Now"
             onClick=""
             size=""

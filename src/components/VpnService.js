@@ -1,60 +1,61 @@
-import React, { Component } from "react";
-import "../index.scss";
-import "../eotss-styles.css";
-import MainHeader from "./MainHeader";
-import MainFooter from "./MainFooter";
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-undef */
+import React, { Component } from 'react';
+import '../index.scss';
+import '../eotss-styles.css';
 import {
   ColoredHeading,
   Paragraph,
   UnorderedList,
   Heading,
-  Button,
-} from "@massds/mayflower-react";
+  Button
+} from '@massds/mayflower-react';
+import MainHeader from './MainHeader';
+import MainFooter from './MainFooter';
 
 class VpnService extends Component {
   componentDidMount() {
-    let sidebar = document.querySelector(".sidebar");
-    let pageContent = document.querySelector(".page-content");
-    window.addEventListener("scroll", function () {
+    const sidebar = document.querySelector('.sidebar');
+    const pageContent = document.querySelector('.page-content');
+    window.addEventListener('scroll', () => {
       myFunction();
     });
-    let header = document.querySelector(".ma__header__hamburger");
-    var sticky = header.offsetTop + 40;
-    let footer = document.getElementById("footer");
-    function myFunction() {
-      console.log("duh");
+    const header = document.querySelector('.ma__header__hamburger');
+    const sticky = header.offsetTop + 40;
+    const footer = document.getElementById('footer');
+    /* function myFunction() {
       if (window.pageYOffset >= sticky && window.innerWidth > 840) {
-        header.classList.add("sticky");
+        header.classList.add('sticky');
         if (sidebar) {
-          sidebar.classList.add("sidebar-margin");
+          sidebar.classList.add('sidebar-margin');
         }
       } else {
-        header.classList.remove("sticky");
+        header.classList.remove('sticky');
         if (sidebar) {
-          sidebar.classList.remove("sidebar-margin");
+          sidebar.classList.remove('sidebar-margin');
         }
       }
-    }
+    } */
     function myFunction() {
       if (
-        window.pageYOffset + window.innerHeight > footer.offsetTop &&
-        window.innerWidth >= 911
+        window.pageYOffset + window.innerHeight > footer.offsetTop
+        && window.innerWidth >= 911
       ) {
-        sidebar.classList.add("absolute");
+        sidebar.classList.add('absolute');
       } else {
-        sidebar.classList.remove("absolute");
+        sidebar.classList.remove('absolute');
       }
       if (window.pageYOffset >= sticky && window.innerWidth > 840) {
-        header.classList.add("sticky");
+        header.classList.add('sticky');
         if (sidebar) {
-          sidebar.classList.add("sidebar-top");
-          sidebar.classList.add("sidebar-margin");
+          sidebar.classList.add('sidebar-top');
+          sidebar.classList.add('sidebar-margin');
         }
       } else {
-        header.classList.remove("sticky");
+        header.classList.remove('sticky');
         if (sidebar) {
-          sidebar.classList.remove("sidebar-top");
-          sidebar.classList.remove("sidebar-margin");
+          sidebar.classList.remove('sidebar-top');
+          sidebar.classList.remove('sidebar-margin');
         }
       }
     }
@@ -62,33 +63,34 @@ class VpnService extends Component {
     function reportWindowSize() {
       if (sidebar) {
         if (window.innerWidth > 910) {
-          let width = pageContent.offsetWidth;
-          sidebar.style.marginLeft = width + "px";
+          const width = pageContent.offsetWidth;
+          sidebar.style.marginLeft = `${width}px`;
         } else {
-          sidebar.style.marginLeft = "0px";
+          sidebar.style.marginLeft = '0px';
         }
       }
     }
     reportWindowSize();
-    window.addEventListener("resize", reportWindowSize);
+    window.addEventListener('resize', reportWindowSize);
   }
+
   render() {
-    return (
+    return(
       <>
         <div className="App">
           <MainHeader active="Services" />
-          <div style={{ height: "20px" }} />
-          <main id="main-content" tabindex="-1">
+          <div style={{ height: '20px' }} />
+          <main id="main-content" tabIndex="-1">
             <div className="pre-content" />
             <div className="main-content main-content--two">
               <aside className="sidebar ">
                 <Heading class="color-green" level={3} text="Rate" />
-                <p style={{ fontSize: "28px" }}>
+                <p style={{ fontSize: '28px' }}>
                   <strong>N/A</strong>
                 </p>
                 <Heading class="color-green" level={3} text="Order Services" />
                 <Button
-                  classes={[""]}
+                  classes={['']}
                   disabled={false}
                   href="https://massgov.service-now.com/nav_to.do?uri=/com.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3Da53f0a90db6cd090b14fab92ca96196f%26sysparm_link_parent%3Dc2c4fc4bdbe81410b14fab92ca9619e6%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dtext_search"
                   info="Request via the ServiceNow Portal"
@@ -100,7 +102,7 @@ class VpnService extends Component {
                   usage=""
                 />
                 <Button
-                  classes={[""]}
+                  classes={['']}
                   disabled={false}
                   href="https://massgov.service-now.com/nav_to.do?uri=/com.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3Da53f0a90db6cd090b14fab92ca96196f%26sysparm_link_parent%3Dc2c4fc4bdbe81410b14fab92ca9619e6%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dtext_search"
                   info="Request via the ServiceNow Portal"
@@ -117,7 +119,7 @@ class VpnService extends Component {
                   text="Additional Information"
                 />
                 <Button
-                  classes={[""]}
+                  classes={['']}
                   disabled={false}
                   href="https://massgov.service-now.com/nav_to.do?uri=/com.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3Da53f0a90db6cd090b14fab92ca96196f%26sysparm_link_parent%3Dc2c4fc4bdbe81410b14fab92ca9619e6%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dtext_search"
                   info="Request via the ServiceNow Portal"
@@ -129,7 +131,7 @@ class VpnService extends Component {
                   usage=""
                 />
                 <Button
-                  classes={[""]}
+                  classes={['']}
                   disabled={false}
                   href="https://massgov.service-now.com/nav_to.do?uri=/com.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3Da53f0a90db6cd090b14fab92ca96196f%26sysparm_link_parent%3Dc2c4fc4bdbe81410b14fab92ca9619e6%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dtext_search"
                   info="Request via the ServiceNow Portal"
@@ -141,7 +143,7 @@ class VpnService extends Component {
                   usage=""
                 />
                 <Button
-                  classes={[""]}
+                  classes={['']}
                   disabled={false}
                   href="https://massgov.service-now.com/nav_to.do?uri=/com.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3Da53f0a90db6cd090b14fab92ca96196f%26sysparm_link_parent%3Dc2c4fc4bdbe81410b14fab92ca9619e6%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dtext_search"
                   info="Request via the ServiceNow Portal"
@@ -191,12 +193,12 @@ class VpnService extends Component {
                   sublist={[
                     {
                       text:
-                        "Must be a currently supported version of Microsoft Windows or Apple MacOs.",
+                        'Must be a currently supported version of Microsoft Windows or Apple MacOs.'
                     },
                     {
                       text:
-                        "EOTSS-supported Web browser such as MS Internet Explorer11, Google Chrome and Firefox.",
-                    },
+                        'EOTSS-supported Web browser such as MS Internet Explorer11, Google Chrome and Firefox.'
+                    }
                   ]}
                 />
                 <ColoredHeading
@@ -210,31 +212,31 @@ class VpnService extends Component {
                   sublist={[
                     {
                       text:
-                        "EOTSS will deliver the product described in this product description.",
+                        'EOTSS will deliver the product described in this product description.'
                     },
                     {
-                      text: "EOTSS will provide instructions for product use.",
-                    },
-                    {
-                      text:
-                        "EOTSS will operate and maintain the Pulse Secure VPN Appliances and all supporting infrastructure.",
+                      text: 'EOTSS will provide instructions for product use.'
                     },
                     {
                       text:
-                        "To ensure the security of Commonwealth information technology resources, EOTSS may block telecommuters’ access to the State Network when troubleshooting security intrusions.",
+                        'EOTSS will operate and maintain the Pulse Secure VPN Appliances and all supporting infrastructure.'
                     },
                     {
                       text:
-                        "EOTSS will enforce the Teleworking Policy, Commonwealth Enterprise Security Policy and Standards, and Acceptable Use policies.",
+                        'To ensure the security of Commonwealth information technology resources, EOTSS may block telecommuters’ access to the State Network when troubleshooting security intrusions.'
                     },
                     {
                       text:
-                        "EOTSS will provide instructions for installing and configuring the VPN Client software.",
+                        'EOTSS will enforce the Teleworking Policy, Commonwealth Enterprise Security Policy and Standards, and Acceptable Use policies.'
                     },
                     {
                       text:
-                        "In cases where EOTSS provides End User Services for the Agency, EOTSS End User Services will be responsible for deployment and support of the client.",
+                        'EOTSS will provide instructions for installing and configuring the VPN Client software.'
                     },
+                    {
+                      text:
+                        'In cases where EOTSS provides End User Services for the Agency, EOTSS End User Services will be responsible for deployment and support of the client.'
+                    }
                   ]}
                 />
                 <Paragraph text="<strong>Please note:</strong> EOTSS End User Services <strong><em>will Not troubleshoot home wifi/internet connectivity issues.</em></strong> If you are unable to connect to your home wifi/internet, please contact your Internet Service Provider (ISP)." />
@@ -243,16 +245,16 @@ class VpnService extends Component {
                   sublist={[
                     {
                       text:
-                        "Follow established process to submit online orders that have been properly approved forrequesting the addition, modification, or deletion of VPN groups, VPN users or access type.",
+                        'Follow established process to submit online orders that have been properly approved forrequesting the addition, modification, or deletion of VPN groups, VPN users or access type.'
                     },
                     {
                       text:
-                        "The user will obtain a remote access internet connection—e.g., commercial or residential DSL, cable, fios or other internet service.",
+                        'The user will obtain a remote access internet connection—e.g., commercial or residential DSL, cable, fios or other internet service.'
                     },
                     {
                       text:
-                        "Non-employee users must be sponsored by a Commonwealth of Massachusetts agency and must be able to install and support their own devices.",
-                    },
+                        'Non-employee users must be sponsored by a Commonwealth of Massachusetts agency and must be able to install and support their own devices.'
+                    }
                   ]}
                 />
                 <Heading level={5} text="VPN Client:" />
@@ -260,20 +262,20 @@ class VpnService extends Component {
                   sublist={[
                     {
                       text:
-                        "The agency IT support organization will be responsible for setting up the user’s computer withthe software required to access the agency LAN and other business software required by the VPN user.",
+                        'The agency IT support organization will be responsible for setting up the user’s computer withthe software required to access the agency LAN and other business software required by the VPN user.'
                     },
                     {
                       text:
-                        "The agency IT support organization will assist the user with installing and configuring the VPN Client software as requested.",
+                        'The agency IT support organization will assist the user with installing and configuring the VPN Client software as requested.'
                     },
                     {
                       text:
-                        "The agency IT organization will be responsible for assisting user’s with connecting to local agency resources, including Remote Desktop Connections.",
+                        'The agency IT organization will be responsible for assisting user’s with connecting to local agency resources, including Remote Desktop Connections.'
                     },
                     {
                       text:
-                        "VPN users will comply with the Commonwealth’s Acceptable Use Policy, the Commonwealth Enterprise Security Policy and Standards and the Commonwealth’s Telework Policy.",
-                    },
+                        'VPN users will comply with the Commonwealth’s Acceptable Use Policy, the Commonwealth Enterprise Security Policy and Standards and the Commonwealth’s Telework Policy.'
+                    }
                   ]}
                 />
                 <ColoredHeading
@@ -288,17 +290,17 @@ class VpnService extends Component {
                 <UnorderedList
                   sublist={[
                     {
-                      text: "Add/Remove User(s)",
+                      text: 'Add/Remove User(s)'
                     },
                     {
-                      text: "Create a New VPN Group",
+                      text: 'Create a New VPN Group'
                     },
                     {
-                      text: "Remove an Existing VPN Group",
+                      text: 'Remove an Existing VPN Group'
                     },
                     {
-                      text: "Modify an Existing VPN Group",
-                    },
+                      text: 'Modify an Existing VPN Group'
+                    }
                   ]}
                 />
                 <Heading
@@ -312,7 +314,7 @@ class VpnService extends Component {
                   individuals through the ServiceNow portal using the "Modify
                   Agency Security Administrator List" Catalog item.
                   <a
-                    style={{ paddingLeft: "3px" }}
+                    style={{ paddingLeft: '3px' }}
                     href="https://massgov.service-now.com/nav_to.do?uri=/com.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3D94aae550dba8d090b14fab92ca96192b%26sysparm_link_parent%3Dc2c4fc4bdbe81410b14fab92ca9619e6%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dtext_search"
                   >
                     Modify Agency Security Requester list via ServiceNow
@@ -328,12 +330,12 @@ class VpnService extends Component {
                   sublist={[
                     {
                       text:
-                        "<a href='https://www.mass.gov/info-details/commonwealth-tools-and-vpn-access'>Commonwealth Tools and VPN access</a>",
+                        "<a href='https://www.mass.gov/info-details/commonwealth-tools-and-vpn-access'>Commonwealth Tools and VPN access</a>"
                     },
                     {
                       text:
-                        "<a href='https://www.mass.gov/info-details/commonwealth-vpn-eligibility-and-requirements'>Commonwealth VPN Eligibility and Requirements</a>",
-                    },
+                        "<a href='https://www.mass.gov/info-details/commonwealth-vpn-eligibility-and-requirements'>Commonwealth VPN Eligibility and Requirements</a>"
+                    }
                   ]}
                 />
                 <ColoredHeading
@@ -346,16 +348,16 @@ class VpnService extends Component {
                   sublist={[
                     {
                       text:
-                        "<a href='https://www.mass.gov/info-details/commonwealth-vpn-faqs'>Commonwealth VPN FAQs</a>",
+                        "<a href='https://www.mass.gov/info-details/commonwealth-vpn-faqs'>Commonwealth VPN FAQs</a>"
                     },
                     {
                       text:
-                        "<a href='https://www.mass.gov/how-to/commonwealth-vpn-client'>Download and install the Commonwealth VPN Client</a>",
+                        "<a href='https://www.mass.gov/how-to/commonwealth-vpn-client'>Download and install the Commonwealth VPN Client</a>"
                     },
                     {
                       text:
-                        "<a href='https://www.mass.gov/info-details/how-to-use-the-commonwealth-vpn'>Use the Commonwealth VPN client</a>",
-                    },
+                        "<a href='https://www.mass.gov/info-details/how-to-use-the-commonwealth-vpn'>Use the Commonwealth VPN client</a>"
+                    }
                   ]}
                 />
                 <ColoredHeading
@@ -371,7 +373,7 @@ class VpnService extends Component {
                       </svg>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        style={{ display: "none" }}
+                        style={{ display: 'none' }}
                       >
                         <symbol
                           xmlns="http://www.w3.org/2000/svg"
@@ -406,7 +408,7 @@ class VpnService extends Component {
                     </div>
 
                     <p className="ma__contact-group__details">
-                      {" "}
+                      {' '}
                       24x7x365 support for Commonwealth end users
                     </p>
 
@@ -427,7 +429,7 @@ class VpnService extends Component {
                     </div>
 
                     <p className="ma__contact-group__details">
-                      {" "}
+                      {' '}
                       for agency/Secretariat IT help desks and support personnel
                     </p>
                   </div>
@@ -439,7 +441,7 @@ class VpnService extends Component {
                       </svg>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        style={{ display: "none" }}
+                        style={{ display: 'none' }}
                       >
                         <symbol
                           xmlns="http://www.w3.org/2000/svg"
