@@ -22,7 +22,6 @@ const ServicesPage = ({ history }) => (
               selectBox={{
                 id: 'sort-select',
                 label: 'Sort by:',
-                onChangeCallback: function noRefCheck() {},
                 options: [
                   {
                     text: 'Relevance',

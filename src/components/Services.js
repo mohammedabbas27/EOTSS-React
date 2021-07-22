@@ -57,30 +57,25 @@ const Services = ({ history }) => (
       next={{
         disabled: false,
         hide: false,
-        onClick: function noRefCheck() {},
         text: 'Next'
       }}
       pages={[
         {
           active: true,
-          onClick: function noRefCheck() {},
           text: '1'
         },
         {
           active: false,
-          onClick: function noRefCheck() {},
           text: '2'
         },
         {
           active: false,
-          onClick: function noRefCheck() {},
           text: '3'
         }
       ]}
       prev={{
         disabled: false,
         hide: false,
-        onClick: function noRefCheck() {},
         text: 'Previous'
       }}
     />

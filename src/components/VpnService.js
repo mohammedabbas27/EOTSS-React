@@ -23,19 +23,6 @@ class VpnService extends Component {
     const header = document.querySelector('.ma__header__hamburger');
     const sticky = header.offsetTop + 40;
     const footer = document.getElementById('footer');
-    /* function myFunction() {
-      if (window.pageYOffset >= sticky && window.innerWidth > 840) {
-        header.classList.add('sticky');
-        if (sidebar) {
-          sidebar.classList.add('sidebar-margin');
-        }
-      } else {
-        header.classList.remove('sticky');
-        if (sidebar) {
-          sidebar.classList.remove('sidebar-margin');
-        }
-      }
-    } */
     function myFunction() {
       if (
         window.pageYOffset + window.innerHeight > footer.offsetTop
